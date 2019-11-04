@@ -34,8 +34,21 @@ namespace labb1
         public int SumInBetween()
         {
             int sum = 0;
+            int lowNumber;
+            int highNumber;
 
-            for (int i = FirstNumber; i <= SecondNumber; i++)
+            if (FirstNumber > SecondNumber)
+            {
+                highNumber = FirstNumber;
+                lowNumber = SecondNumber;
+            }
+            else
+            {
+                highNumber = SecondNumber;
+                lowNumber = FirstNumber;
+            }
+
+            for (int i = lowNumber; i <= highNumber; i++)
             {
                 sum += i;
             }
